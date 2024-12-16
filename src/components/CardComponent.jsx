@@ -1,5 +1,5 @@
 "use strict"
-
+import { useState } from "react";
 import languages from "../datas/languages";
 import ButtonComponent from "./ButtonComponent";
 import DescriptionComponent from "./DescriptionComponent";
@@ -7,6 +7,7 @@ import DescriptionComponent from "./DescriptionComponent";
 
 
 function CardComponent() {
+    const [clicked, setClicked] = useState(0)
 
     return (
         <div className="card">
