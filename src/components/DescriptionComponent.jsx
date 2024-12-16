@@ -1,12 +1,13 @@
 "use strict"
+import { useState } from "react";
 import languages from "../datas/languages";
 
-function DescriptionComponent(props) {
-
+function DescriptionComponent({ element }) {
+    const [clicked, setClicked] = useState(false)
     return (
         <>
-            <h5 className="card-title">{props.title}</h5>
-            <p className="card-text">{props.title}</p>
+            <h5 className="card-title">{element.title}</h5>
+            <p className="card-text">{element.description}</p>
         </>
     )
 }

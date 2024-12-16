@@ -19,7 +19,10 @@ function CardComponent() {
                     ))}
                 </ul>
                 <div id='description'>
-                    <DescriptionComponent />
+                    {languages.map((language) => (
+                        <DescriptionComponent key={`description-${language.id}`} element={language} />
+                    ))}
+
                 </div>
             </div>
         </div>
