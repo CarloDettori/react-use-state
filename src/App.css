@@ -1,1 +1,28 @@
 /* #root {} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-body {
+    padding: 40px;
+}
+
+.card {
+    padding: 0;
+    max-width: 700px;
+    margin: 100px auto 0;
+}
+
+#button-box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+#description {
+    padding: 20px;
+    border: 1px solid #5f61603a;
+    border-radius: 5px;
+}
