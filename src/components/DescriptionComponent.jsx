@@ -1,11 +1,12 @@
 "use strict"
 import languages from "../datas/languages";
 
-function DescriptionComponent() {
+function DescriptionComponent(props) {
+
     return (
         <>
-            <h5 className="card-title">{element.title}</h5>
-            <p className="card-text">{element.title}</p>
+            <h5 className="card-title">{props.title}</h5>
+            <p className="card-text">{props.title}</p>
         </>
     )
 }
