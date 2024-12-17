@@ -1,7 +1,7 @@
-"use strict"
 
 
-function DescriptionComponent({ element, onToggle }) {
+
+function DescriptionComponent({ element, onToggle, clicked }) {
     return (
         <>
             <div className={clicked ? "show" : ""}>

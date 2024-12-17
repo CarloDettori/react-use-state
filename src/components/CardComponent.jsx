@@ -2,12 +2,12 @@
 import { useState } from "react";
 import languages from "../datas/languages";
 import ButtonComponent from "./ButtonComponent";
-import DescriptionComponent from "./DescriptionComponent";
+//import DescriptionComponent from "./DescriptionComponent";
 
 
 
 function CardComponent() {
-    const [activeDescription, setActiveDescription] = useState(null)
+    const [activeDescription, setActiveDescription] = useState(languages[0])
     const [clicked, setClicked] = useState(0);
     function ToggleShowComponent() {
         setActiveDescription;
@@ -18,17 +18,21 @@ function CardComponent() {
             <div className="card-body">
                 <ul id="button-box">
                     {languages.map((language) => (
-                        <ButtonComponent key={`button-${language.id}`} element={language} />
+                        <ButtonComponent
+                            key={`button-${language.id}`}
+                            element={language}
+                            onClick={() => { setActiveDescription(element.id) }} />
                     ))}
                 </ul>
                 <div id='description'>
-                    {languages.map((language) => (
+                    <h5>{activeDescription.title}</h5> <p>{activeDescription.description}</p>
+                    {/* {languages.map((language) => (
                         <DescriptionComponent
                             key={`description-${language.id}`}
                             element={language}
-                            clicked={activeDescription === activeDescription}
-                            onToggle={() => { setActiveDescription(language.id) }} />
-                    ))}
+                            clicked={activeDescription === language.id}
+                            onToggle={() => { setActiveDescription(language.id) }} /> 
+                    ))}*/}
 
                 </div>
             </div>
