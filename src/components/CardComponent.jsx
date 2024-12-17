@@ -7,8 +7,11 @@ import DescriptionComponent from "./DescriptionComponent";
 
 
 function CardComponent() {
-    const [clicked, setClicked] = useState(0)
-
+    const [activeDescription, setActiveDescription] = useState(null)
+    const [clicked, setClicked] = useState(0);
+    function ToggleShowComponent() {
+        setActiveDescription;
+    }
     return (
         <div className="card">
             <h5 className="card-header">Learn Web development </h5>
@@ -20,7 +23,11 @@ function CardComponent() {
                 </ul>
                 <div id='description'>
                     {languages.map((language) => (
-                        <DescriptionComponent key={`description-${language.id}`} element={language} />
+                        <DescriptionComponent
+                            key={`description-${language.id}`}
+                            element={language}
+                            clicked={activeDescription === activeDescription}
+                            onToggle={() => { setActiveDescription(language.id) }} />
                     ))}
 
                 </div>
