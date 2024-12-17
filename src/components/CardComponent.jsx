@@ -21,7 +21,7 @@ function CardComponent() {
                         <ButtonComponent
                             key={`button-${language.id}`}
                             element={language}
-                            onClick={() => { setActiveDescription(element.id) }} />
+                            onClick={() => { setActiveDescription(language.id) }} />
                     ))}
                 </ul>
                 <div id='description'>
